@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>README - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../ml-100k/README.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../MovieData.html">MovieData</a>
+  
+    <li><a href="../MovieTest.html">MovieTest</a>
+  
+    <li><a href="../ViewerInfo.html">ViewerInfo</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>SUMMARY &amp; USAGE LICENSE</p>
+
+<h6 id="label-"></h6>
+
+<p>MovieLens data sets were collected by the GroupLens Research Project at the
+University of Minnesota.</p>
+
+<p>This data set consists of:</p>
+
+<pre>* 100,000 ratings (1-5) from 943 users on 1682 movies. 
+* Each user has rated at least 20 movies. 
+* Simple demographic info for the users (age, gender, occupation, zip)</pre>
+
+<p>The data was collected through the MovieLens web site (movielens.umn.edu)
+during the seven-month period from September 19th,  1997 through April
+22nd, 1998. This data has been cleaned up - users who had less than 20
+ratings or did not have complete demographic information were removed from
+this data set. Detailed descriptions of the data file can be found at the
+end of this file.</p>
+
+<p>Neither the University of Minnesota nor any of the researchers involved can
+guarantee the correctness of the data, its suitability for any particular
+purpose, or the validity of results based on the use of the data set.  The
+data set may be used for any research purposes under the following
+conditions:</p>
+
+<pre>* The user may not state or imply any endorsement from the
+  University of Minnesota or the GroupLens Research Group.
+
+* The user must acknowledge the use of the data set in
+  publications resulting from the use of the data set, and must
+  send us an electronic or paper copy of those publications.
+
+* The user may not redistribute the data without separate
+  permission.
+
+* The user may not use this information for any commercial or
+  revenue-bearing purposes without first obtaining permission
+  from a faculty member of the GroupLens Research Project at the
+  University of Minnesota.</pre>
+
+<p>If you have any further questions or comments, please contact Jon Herlocker
+&lt;herlocke@cs.umn.edu&gt;.</p>
+
+<p>ACKNOWLEDGEMENTS</p>
+
+<h6 id="label-"></h6>
+
+<p>Thanks to Al Borchers for cleaning up this data and writing the
+accompanying scripts.</p>
+
+<p>PUBLISHED WORK THAT HAS USED THIS DATASET</p>
+
+<h6 id="label-"></h6>
+
+<p>Herlocker, J., Konstan, J., Borchers, A., Riedl, J.. An Algorithmic
+Framework for Performing Collaborative Filtering. Proceedings of the 1999
+Conference on Research and Development in Information Retrieval. Aug. 1999.</p>
+
+<p>FURTHER INFORMATION ABOUT THE GROUPLENS RESEARCH PROJECT</p>
+
+<h6 id="label-"></h6>
+
+<p>The GroupLens Research Project is a research group in the Department of
+Computer Science and Engineering at the University of Minnesota. Members of
+the GroupLens Research Project are involved in many research projects
+related to the fields of information filtering, collaborative filtering,
+and recommender systems. The project is lead by professors John Riedl and
+Joseph Konstan. The project began to explore automated collaborative
+filtering in 1992, but is most well known for its world wide trial of an
+automated collaborative filtering system for Usenet news in 1996.  The
+technology developed in the Usenet trial formed the base for the formation
+of Net Perceptions, Inc., which was founded by members of GroupLens
+Research. Since then the project has expanded its scope to research overall
+information filtering solutions, integrating in content-based methods as
+well as improving current collaborative filtering technology.</p>
+
+<p>Further information on the GroupLens Research project, including research
+publications, can be found at the following web site:</p>
+
+<pre>http://www.grouplens.org/</pre>
+
+<p>GroupLens Research currently operates a movie recommender based on
+collaborative filtering:</p>
+
+<pre>http://www.movielens.org/</pre>
+
+<p>DETAILED DESCRIPTIONS OF DATA FILES</p>
+
+<h6 id="label-"></h6>
+
+<p>Here are brief descriptions of the data.</p>
+
+<p>ml-data.tar.gz   -- Compressed tar file.  To rebuild the u data files do
+this:</p>
+
+<pre>gunzip ml-data.tar.gz
+tar xvf ml-data.tar
+mku.sh</pre>
+
+<p>u.data     -- The full u data set, 100000 ratings by 943 users on 1682
+items.</p>
+
+<pre>Each user has rated at least 20 movies.  Users and items are
+numbered consecutively from 1.  The data is randomly
+ordered. This is a tab separated list of 
+   user id | item id | rating | timestamp. 
+The time stamps are unix seconds since 1/1/1970 UTC</pre>
+
+<p>u.info     -- The number of users, items, and ratings in the u data set.</p>
+
+<p>u.item     -- Information about the items (movies); this is a tab separated</p>
+
+<pre>list of
+movie id | movie title | release date | video release date |
+IMDb URL | unknown | Action | Adventure | Animation |
+Children's | Comedy | Crime | Documentary | Drama | Fantasy |
+Film-Noir | Horror | Musical | Mystery | Romance | Sci-Fi |
+Thriller | War | Western |
+The last 19 fields are the genres, a 1 indicates the movie
+is of that genre, a 0 indicates it is not; movies can be in
+several genres at once.
+The movie ids are the ones used in the u.data data set.</pre>
+
+<p>u.genre    -- A list of the genres.</p>
+
+<p>u.user     -- Demographic information about the users; this is a tab</p>
+
+<pre>separated list of
+user id | age | gender | occupation | zip code
+The user ids are the ones used in the u.data data set.</pre>
+
+<p>u.occupation -- A list of the occupations.</p>
+
+<p>u1.base    -- The data sets u1.base and u1.test through u5.base and u5.test
+u1.test       are 80%/20% splits of the u data into training and test data.
+u2.base       Each of u1, ..., u5 have disjoint test sets; this if for
+u2.test       5 fold cross validation (where you repeat your experiment
+u3.base       with each training and test set and average the results).
+u3.test       These data sets can be generated from u.data by mku.sh.
+u4.base u4.test u5.base u5.test</p>
+
+<p>ua.base    -- The data sets ua.base, ua.test, ub.base, and ub.test ua.test 
+split the u data into a training set and a test set with ub.base      
+exactly 10 ratings per user in the test set.  The sets ub.test      
+ua.test and ub.test are disjoint.  These data sets can</p>
+
+<pre>be generated from u.data by mku.sh.</pre>
+
+<p>allbut.pl  -- The script that generates training and test sets where</p>
+
+<pre>all but n of a users ratings are in the training data.</pre>
+
+<p>mku.sh     -- A shell script to generate all the u data sets from u.data.</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
