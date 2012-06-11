@@ -119,8 +119,9 @@ class MovieTest
   end
   # return the satander deviation of the error
 def stdv
- result=@movie_test.inject(0){ |result,element|   result + ((element.r - element.p)**2)}
- Math.sqrt (result)
+  m=mean
+ result=@movie_test.inject(0){ |result,element|   result + ((m - element.p)**2)}
+ Math.sqrt(result /((@movie_test.length-1).to_f))
 end 
 # return the root mean square error of the predection
 def rms 
@@ -138,7 +139,7 @@ end
 end # end of the classs
      movie_user=MovieData.new"ml-100k","u1"
      t1= Time.now
-     x=movie_user.run_test(10)
+     x=movie_user.run_test()
      t2=Time.now
      puts " the time it take to predict 10 ratings is=  " + ((t2 - t1) * 1000).to_s + " Mileseconds"
      puts "The Movie data"
